@@ -6,6 +6,9 @@ if custom_init_path then
   dofile(custom_init_path)
 end
 
+vim.g.loaded_python3_provider = nil
+vim.g.python3_host_prog = "/usr/bin/python3"
+
 require("core.utils").load_mappings()
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
